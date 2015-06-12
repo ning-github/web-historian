@@ -61,6 +61,8 @@ exports.handleRequest = function (req, res) {
       });
     });
   }
-  res.end(archive.paths.list);
+  // else{
+  //   utils.sendResponse(res, 'not found', 404);
+  // }
 };
 
