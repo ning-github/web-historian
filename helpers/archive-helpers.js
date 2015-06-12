@@ -1,7 +1,7 @@
 var fs = require('fs');
 var path = require('path');
 var _ = require('underscore');
-
+var request = require('request');
 /*
  * You will need to reuse the same paths many times over in the course of this sprint.
  * Consider using the `paths` object below to store frequently used file paths. This way,
@@ -58,7 +58,7 @@ exports.isUrlInList = function(url, callback){
 };
 
 exports.addUrlToList = function(url, callback){
-  fs.appendFile(exports.paths.list, url, function(err, data){
+  fs.appendFile(exports.paths.list, url+'\n', function(err, data){
     callback();
   });
 };
